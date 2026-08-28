@@ -1,13 +1,169 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elynh — Cyber Suaka</title>
+    <style>
+        /* Cyberpunk Night Palette */
+        :root {
+            --bg-main: #06090e;
+            --bg-card: #0d1117;
+            --bg-card-hover: #161b22;
+            --text-main: #e6edf3;
+            --text-muted: #8b949e;
+            --accent-cyan: #00f5d4;
+            --accent-pink: #ff007f;
+            --border: #21262d;
+            --glow-cyan: rgba(0, 245, 212, 0.25);
+            --glow-pink: rgba(255, 0, 127, 0.25);
+        }
 
-    <title>Home</title>
-  </head>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif;
+        }
 
-  <body>
-    <h1>Welcome to My Page!</h1>
-  </body>
-</html>
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            /* Subtly textured background grid */
+            background-image: 
+                linear-gradient(rgba(33, 38, 45, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(33, 38, 45, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: -1px -1px;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navbar */
+        header {
+            background-color: rgba(6, 9, 14, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            letter-spacing: -0.025em;
+            text-shadow: 0 0 12px var(--glow-cyan);
+        }
+
+        .logo span {
+            color: var(--accent-pink);
+            text-shadow: 0 0 12px var(--glow-pink);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+            text-shadow: 0 0 8px var(--glow-cyan);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 4rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 0 10px var(--glow-cyan);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            max-width: 850px;
+            background: linear-gradient(90deg, #ffffff 30%, var(--accent-cyan) 70%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-cyan);
+            color: var(--bg-main);
+            box-shadow: 0 0 15px var(--glow-cyan);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 25px rgba(0, 245, 212, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            background-color: rgba(13, 17, 23, 0.5);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-pink);
