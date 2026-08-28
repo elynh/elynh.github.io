@@ -167,3 +167,234 @@
 
         .btn-secondary:hover {
             border-color: var(--accent-pink);
+            color: var(--accent-pink);
+            box-shadow: 0 0 15px var(--glow-pink);
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        .grid-section {
+            padding: 2.5rem 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: var(--accent-pink);
+            box-shadow: 0 0 8px var(--glow-pink);
+        }
+
+        .see-all {
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: text-shadow 0.2s;
+        }
+
+        .see-all:hover {
+            text-shadow: 0 0 8px var(--glow-cyan);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .card:hover {
+            background-color: var(--bg-card-hover);
+            transform: translateY(-3px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px var(--glow-cyan);
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-pink);
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 0;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 1.25rem;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            .footer-links a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">elynh<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#rupa">Rupa</a></li>
+                    <li><a href="#larik">Larik</a></li>
+                    <li><a href="#kelana">Jejak Kelana</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="hero-tag">System :: Online</span>
+            <h1>Merajut rupa, mengeja rasa, dan menyusuri jejak kelana.</h1>
+            <p>Selamat datang di suaka kecil elynh. Sebuah sudut tempat antarmuka visual dirancang dengan ketenangan, gema pikiran dituangkan dalam kata, dan perjalanan di dunia game diabadikan.</p>
+            <div class="btn-group">
+                <a href="#rupa" class="btn btn-primary">Singgahi Rupa</a>
+                <a href="#larik" class="btn btn-secondary">Merapi Kata</a>
+            </div>
+        </section>
+
+        <section id="rupa" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title">Rupa & Antarmuka</h2>
+                <a href="#" class="see-all">Jelajahi Rupa &rarr;</a>
+            </div>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-tag">UI/UX Design</div>
+                    <h3>Harmoni dalam Ruang Terbuka</h3>
+                    <p>Eksplorasi antarmuka yang memberi jeda bagi mata dan ketenangan bagi jiwa pengguna.</p>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Design System</div>
+                    <h3>Bahasa Warna dan Bentuk</h3>
+                    <p>Dokumentasi visual tentang bagaimana identitas tumbuh dari garis sederhana dan spektrum warna.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="larik" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title">Larik & Catatan</h2>
+                <a href="#" class="see-all">Baca Larik &rarr;</a>
+            </div>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-tag">Renungan</div>
+                    <h3>Tentang Jeda dan Ruang Kosong</h3>
+                    <p>Catatan kecil mengenai kekuatan white space—bahwa dalam desain maupun hidup, keheningan punya suaranya sendiri.</p>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Proses Kreatif</div>
+                    <h3>Menangkap Gagasan yang Lewat</h3>
+                    <p>Cara memeluk ide-ide yang samar sebelum mereka memudar ditelan waktu.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="kelana" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title">Jejak Kelana</h2>
+                <a href="#" class="see-all">Ikuti Kelana &rarr;</a>
+            </div>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-tag">Catatan Kelana</div>
+                    <h3>Menyusuri Piksel dan Puisi</h3>
+                    <p>Ulasan kontemplatif tentang bagaimana mekanik game dan desain level menyampaikan rasa tanpa sepatah kata.</p>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Eksplorasi Narasi</div>
+                    <h3>Suaka Bagi Pengembara Digital</h3>
+                    <p>Refleksi atas lanskap RPG dan kisah-kisah fantastis yang membekas setelah layar meredup.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 elynh. Dirajut dengan ketenangan.</p>
+        <div class="footer-links">
+            <a href="#">GitHub</a>
+            <a href="#">Twitter/X</a>
+            <a href="#">Surel</a>
+        </div>
+    </footer>
+
+</body>
+</html>
